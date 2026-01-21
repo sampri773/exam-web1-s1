@@ -1,0 +1,70 @@
+main{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;   
+}
+form{
+    width: 50%;
+    height: 45vw;
+    background-color:white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 2rem;
+}
+form .txt{
+    text-align: center;
+    line-height: 2;
+    margin-block: 2rem;
+}
+form .txt p {
+    color: var(--color5);
+}
+form .mail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* width: 50%; */
+    width: 80%;
+}
+form .mail input{
+    outline: none;
+    border: 1px solid;
+    /* height: 3rem; */
+    padding: 1rem;
+    border-radius:10px ;
+    border: 1px solid rgb(205, 205, 205);
+}
+form .mail textarea{
+        outline: none;
+    border: 1px solid;
+    /* height: 3rem; */
+    padding: 1rem;
+    border-radius:10px ;
+    border: 1px solid rgb(205, 205, 205);   
+}
+form .cont{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    /* background-color: red; */
+    width: 80%;
+
+}
+form .cont .input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%;
+}
+form .cont .input input{
+    outline: none;
+    border: 1px solid;
+    /* height: 3rem; */
+    padding: 1rem;
+    border-radius:10px ;
+    border: 1px solid rgb(205, 205, 205);
+
+}
