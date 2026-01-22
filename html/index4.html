@@ -1,71 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nos Réalisations - BE LOYAL IT</title>
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/index4.css">
-    <nav>
-        <img src="../img/logo/119143389_4389718227736092_5767319527882787500_n.png" alt="">
-        <li>
-            <ul><a href="">Accueil</a></ul>
-            <ul><a href="./index2.html">Service</a></ul>
-            <ul><a href="">Realisation</a></ul>
-            <ul><a href="">A propos</a></ul>
-            <ul><a href="../html/index4.html">Contact</a></ul>
-        </li>
-    </nav>
 </head>
 
 <body>
+    <nav>
+        <img src="../img/logo/119143389_4389718227736092_5767319527882787500_n.png" alt="BE LOYAL IT Logo">
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./index2.html">Service</a></li>
+            <li><a href="./index4.html">Realisation</a></li>
+            <!-- <li><a href="">A propos</a></li> -->
+            <li><a href="./index3.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.717510254809!2d47.522953974972594!3d-18.899609282268962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f080ab0cd4a6fd%3A0x13112cfee11e2adc!2sBE%20LOYAL%20IT!5e0!3m2!1sfr!2smg!4v1769005812277!5m2!1sfr!2smg"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <form>
-            <div class="txt">
-                <h2>Contacter nous</h2>
-                <p>Vous avez un projet ou une question ? L’équipe Be Loyal IT est à votre écoute.</p>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Nos Réalisations</h1>
+                <p class="hero-subtitle">Découvrez comment Be Loyal IT accompagne les entreprises dans leurs projets technologiques grâce à des solutions fiables et innovantes.</p>
             </div>
-            <div class="cont">
-                <div class="input">
-                    <label for="">Prenom</label>
-                    <input type="text" placeholder="Prenom">
-                </div>
-                <div class="input">
+        </section>
 
-                    <label for="">Nom</label>
-                    <input type="text" placeholder="Nom">
-                </div>
-            </div>
-            <div class="mail">
-                <label for="">Email</label>
-                <input type="email" placeholder="Email">
-            </div>
-            <div class="cont">
-                <div class="input">
-                    <label for="">Numéro</label>
-                    <input type="text" placeholder="Numéro">
-                </div>
-                <div class="input">
+        <section class="projects-section">
+            <div class="projects-grid">
+                <article class="project-card project-large">
+                    <div class="project-image">
+                        <img src="../img/infrastructure.jpg" alt="Déploiement réseau sécurisé">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Infrastructure & Réseau</span>
+                        <h2>Déploiement réseau sécurisé pour PME</h2>
+                        <p class="project-description">Mise en place d'une infrastructure réseau sécurisée pour une petite entreprise locale.</p>
+                        <div class="project-result">
+                            <h3>Résultat</h3>
+                            <ul>
+                                <li>✓ Réseau fiable et performant</li>
+                                <li>✓ Performance améliorée</li>
+                                <li>✓ Protection optimale des données</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-                    <label for="">Comment nous avez-vous connus ?</label>
-                    <input type="text" placeholder="Comment nous avez-vous connus ?">
+                <article class="project-card project-medium">
+                    <div class="project-image">
+                        <img src="../img/telephone.jpg" alt="Installation PABX">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Téléphonie</span>
+                        <h2>Installation PABX / IPBX pour société commerciale</h2>
+                        <p class="project-description">Déploiement d'un système de téléphonie professionnelle pour centraliser les appels.</p>
+                        <div class="project-result">
+                            <h3>Résultat</h3>
+                            <ul>
+                                <li>✓ Communication optimisée</li>
+                                <li>✓ Service client plus efficace</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card project-medium">
+                    <div class="project-image">
+                        <img src="../img/serveur.jpg" alt="Solution de sauvegarde">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Stockage & Sauvegarde</span>
+                        <h2>Solution de sauvegarde et stockage</h2>
+                        <p class="project-description">Installation de serveurs et solutions de backup pour entreprise informatique.</p>
+                        <div class="project-result">
+                            <h3>Résultat</h3>
+                            <ul>
+                                <li>✓ Sécurisation des données critiques</li>
+                                <li>✓ Reprise rapide en cas d'incident</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card project-large">
+                    <div class="project-image">
+                        <img src="../img/evenement.jpg" alt="Événement professionnel">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Événementiel & Audiovisuel</span>
+                        <h2>Organisation d'événement professionnel avec diffusion live</h2>
+                        <p class="project-description">Mise en place de solutions audiovisuelles et streaming pour un événement local.</p>
+                        <div class="project-result">
+                            <h3>Résultat</h3>
+                            <ul>
+                                <li>✓ Audience augmentée</li>
+                                <li>✓ Diffusion fluide et professionnelle</li>
+                                <li>✓ Retour positif des participants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="testimonial-container">
+                <div class="testimonial-icon">💬</div>
+                <blockquote class="testimonial-text">
+                    "Grâce à Be Loyal IT, notre réseau fonctionne sans interruption et nos communications sont optimisées. L'équipe est réactive et professionnelle."
+                </blockquote>
+                <div class="testimonial-author">
+                    <strong>Directeur IT</strong>
+                    <span>Société Locale</span>
                 </div>
             </div>
-            <div class="mail">
-                <label for="">Message</label>
-                <textarea name="" id=""></textarea>
-            </div>
-            <button class="btn btn1">Envoyé</button>
-        </form>
+        </section>
 
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2>Vous voulez donner vie à vos projets IT ?</h2>
+                <p>Contactez-nous dès aujourd'hui pour discuter de votre solution sur mesure !</p>
+                <div class="cta-buttons">
+                    <a href="./index4.html" class="btn btn1">Nous contacter</a>
+                    <a href="./index2.html" class="btn btn2">Découvrir nos services</a>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Be Loyal IT</h3>
+                <p>Votre partenaire IT pour des solutions fiables et innovantes.</p>
+                <img src="../img/logo/119143389_4389718227736092_5767319527882787500_n.png" alt="Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Navigation</h3>
+                <p><a href="./index.html">Accueil</a></p>
+                <p><a href="./index2.html">Services</a></p>
+                <p><a href="./index4.html">Réalisations</a></p>
+                <p><a href="./index3.html">Contact</a></p>
+            </div>
+            <div class="footer-info">
+                <h3>Adresse</h3>
+                <p>Lot III P 20 Ge Marohoho</p>
+                <p>Tsimbazaza</p>
+                <p>Antananarivo 101</p>
+                <p>MADAGASCAR</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

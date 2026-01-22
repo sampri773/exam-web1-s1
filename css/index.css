@@ -1,97 +1,265 @@
-/* body{
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-main{
-    padding-left: 5vw;
-    /* margin-top: 10vw; */
+main {
+    padding: 0;
     width: 100%;
-    height: 100%;
-    /* width: 60vw; */
-    /* position: relative;    */
+    min-height: calc(100vh - 72px);
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    padding: 6rem 5vw;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* gap: 5rem; */
-
-}
-main .txt{
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
-}
-main .txt h1{
-    /* margin-bottom: 1rem; */
-    width: 50%;
-    /* height: 30%; */
-    /* font-weight: 800; */
-    font-size: var(--h1);
-    /* background-color: red; */
-}
-main h5{
-    /* margin-bottom: 2rem; */
-    color:var(--color5);
-    /* height: 5vw; */
-}
-.cont{
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-}
-main .mainImg{
-    width: 20vw;
-    height: 30vw;
-    position: absolute;
-    top: 7vw;
-    right: 10vw;
-    z-index: 0;
-
-}
-main .service{
-    width: 55vw;
-    height: 100%;
-    /* background-color: rebeccapurple; */
-    margin-block : 13vw;
-    display: flex;
-    gap: 1rem;
-}
-
-main .service .servicetxt img{
-    width: 13vw;
-    height: 10vw;
-    border-radius: 10px;
-    position: relative;   
-    z-index: 0;           
-}
-
-main .service .servicetxt h2{
-    width: 13vw;
-    font-size: 0.8rem;
-    position: relative;   
-    z-index: 1;           
-    margin-top: -5vw;
-    background-color: rgba(0, 0, 0, 0.386);
-    color: white;
+    padding: 8rem 5vw 6rem;
     text-align: center;
-    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    animation: fadeIn 0.8s ease-out;
 }
-main .service span{
-    margin-left: 15vw;
+
+main .txt {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 1.5rem;
+    max-width: 100%;
+    width: 100%;
 }
-main .service span h2{
-    width: 50vh;
-    /* background-color: red; */
+
+main .txt h1 {
+    width: 100%;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-main .service span p{
-    color: var(--color5);
+
+main .txt h5 {
+    color: #475569;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
-main .service span button{
-    background-color: var(--color2);
-    color: white;
+
+.cont {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.cont .btn {
+    animation: scaleIn 0.5s ease-out 0.8s both;
+}
+
+.cont .btn:nth-child(2) {
+    animation-delay: 0.9s;
+}
+
+main .mainImg {
+    display: none;
+}
+
+main .service {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+main .service .servicetxt {
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* main .service .servicetxt:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+main .service .servicetxt:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+main .service .servicetxt:nth-child(3) {
+    animation-delay: 0.3s;
+} */
+
+.service-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    transition: 0.4s ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    /* border-color: var(--color2); */
+}
+
+main .service .servicetxt img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+main .service .servicetxt h2 {
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    /* text-align: left; */
+    padding: 1.5rem;
+    margin: 0;
+    transition: var(--transition);
+}
+
+.service-card:hover h2 {
+    color: var(--color2);
+}
+
+.service-info {
+    grid-column: 1 / -1;
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    border: 2px solid rgba(27, 116, 156, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.service-info h2 {
+    width: 100%;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.service-info p {
+    color: #475569;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.service-info .btn {
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+
+
+/* responsive*/
+@media (max-width: 1024px) {
+    .hero {
+        padding: 6rem 5vw 4rem;
+    }
+
+    main .service {
+        padding: 4rem 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0;
+    }
+
+    .hero {
+        padding: 4rem 2rem 3rem;
+    }
+
+    main .txt h1 {
+        font-size: 2rem;
+    }
+
+    main .txt h5 {
+        font-size: 1.125rem;
+    }
+
+    .cont {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cont .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    main .service {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .service-info {
+        padding: 3rem 2rem;
+        margin-top: 2rem;
+    }
+
+    .service-info h2 {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        padding: 3rem 2rem 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    main .txt h1 {
+        font-size: 1.75rem;
+    }
+
+    main .service .servicetxt img {
+        height: 180px;
+    }
+
+    .service-info {
+        padding: 2rem 1.5rem;
+    }
 }
